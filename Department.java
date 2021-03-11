@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class Department
 {
 	
+	//Department fields
 	private String deptName;
 	private ArrayList<Student> studentList = new ArrayList<Student>();
 	
+	//default contructor
 	public Department()
 	{
 		
@@ -15,6 +17,7 @@ public class Department
 		
 	}
 	
+	//constructor with deptName
 	public Department(String deptName)
 	{
 		
@@ -22,6 +25,7 @@ public class Department
 		
 	}
 	
+	/* setXXX() and getXXX() methods */
 	public void setDeptName(String deptName)
 	{
 		
@@ -36,6 +40,7 @@ public class Department
 		
 	}
 	
+	//adds a student object to its list
 	public void addStudent (Student student)
 	{
 		
@@ -43,6 +48,7 @@ public class Department
 		
 	}
 	
+	//returns the departmnet's list of student objects
 	public ArrayList<Student> getStudentList()
 	{
 		

@@ -9,10 +9,11 @@ public class InstituteDemo
 	
 	public static void main(String[] args)
 	{
-		
+		//create scanner and randomizer
 		Scanner keyboard = new Scanner(System.in);
 		Random random = new Random(5);
 		
+		//create institute and departments
 		Institute bits = new Institute("BITS");
 		
 		Department cs = new Department("CS"),
@@ -23,6 +24,7 @@ public class InstituteDemo
 		bits.addDepartment(ee);
 		bits.addDepartment(other);
 		
+		//ask user for 6 students and their respective department
 		for (int i = 0; i < 6; i++)
 		{
 			
@@ -41,6 +43,7 @@ public class InstituteDemo
 			
 			boolean notAdded = true;
 			
+			//make a student object storing each of the 6 student's info
 			for (Department department : bits.getDepartmentList())
 			{
 				
@@ -55,6 +58,7 @@ public class InstituteDemo
 				
 			}
 			
+			//assume other if the department isn't found
 			if (notAdded)
 			{
 				
@@ -65,8 +69,10 @@ public class InstituteDemo
 				
 		}
 		
+		//display the institute's students
 		System.out.printf("Institute Name: %s\n", bits.getInstituteName());
 		
+		//display each student's toString() method
 		for (Department department : bits.getDepartmentList())
 		{
 			for (Student eachStudent : department.getStudentList())
@@ -77,6 +83,7 @@ public class InstituteDemo
 			}
 		}
 		
+		//display the total number of students
 		System.out.printf("Total number of students: %d",
 				bits.getTotalStudentsInInstitute());
 	
